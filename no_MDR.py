@@ -586,7 +586,7 @@ El programa construye internamente las ecuaciones de comportamiento de las barra
 
 - Convenciones generales:
 
-Cada barra tendrá asignado un número que lo identifica en el programa. La numeración comienza en cero y será consecutiva en el orden en que se aporten las barras al programa. Los extremos de una barra se denominan genéricamente "i" (primer extremo), "j" (segundo extremo). El orden es nuevamente relevante, y es aquel en que sean proporcionados en la definición de la barra.
+Cada barra tendrá asignado un número que la identifica en el programa. La numeración comienza en cero y será consecutiva en el orden en que se aporten las barras al programa. Los extremos de una barra se denominan genéricamente "i" (primer extremo), "j" (segundo extremo). El orden es nuevamente relevante, y es aquel en que sean proporcionados en la definición de la barra.
 
 Se asume un eje "x" local en la barra con dirección desde su primer extremo "i" hacia su segundo extremo "j", y un eje "y" local girado 90º en sentido antihorario respecto del anterior. Nótese que i,j son denominaciones genéricas que nunca se concretarán ya que el programa no usa el concepto de nudo. 
 
@@ -607,7 +607,7 @@ Puede comenzar usando el botón "plantilla", que genera un fichero con valores n
 -- La cuarta linea será ignorada. Su uso previsto es servir de cabecera legible para la definición de las barras. 
 
 -- La quinta línea y siguientes (tantas lineas como barras) especifican las propiedades de cada barra. Cada cantidad debe separarse de las demás por uno o más espacios. Las propiedades requeridas son, por este orden: 
--- -- Número de barra. Esta columna siempre debe comenzar por cero e incrementarse en uno cada nueva línea. La plantilla proporciona tal numeración, que en realidad es sólo un recordatorio visual ignorado por el programa (recuerde que el orden en que se definen las barras es en realidad lo que condiciona su número identificativo).
+-- -- Número de barra. Esta columna siempre debe comenzar por cero e incrementarse en uno cada nueva línea. La plantilla proporciona tal numeración, que en realidad es sólo un recordatorio visual ignorado por el programa (recuerde que el orden en que se definen las barras es lo que condiciona su número identificativo).
 -- -- EI: módulo de Young por el momento de inercia
 -- -- EA: módulo de Young por el área de la sección 
 -- -- x(i), y(i), x(j), y(j), coordenadas x,y globales de cada extremo i,j, de la barra
@@ -617,7 +617,7 @@ Puede comenzar usando el botón "plantilla", que genera un fichero con valores n
 en donde "K" es la matriz de rigidez de la barra y "a0" representa cualquier movimiento de los extremos que no produzca "f" en ausencia de cargas internas (representadas por los términos de empotramiento perfecto "f0"). Como se ha indicado, de las infinitas posibilidades para "a0" se ha elegido aquella en que "i" tiene movimientos nulos.
 -- -- ejes_i, ejes_j: aquí especificamos en qué ejes deseamos operar en los extremos de esta barra. Pueden ser ejes diferentes para ambos extremos. Se asume que las ecuaciones adicionales que aportaremos más tarde usarán esos ejes. El programa resuelve en primera instancia las incógnitas en estos ejes. En general querremos usar los mismos ejes para todos los extremos de barra que participen de una conexión particular (ello simplifica las ecuaciones). Los códigos para especificar estos ejes son "g" para usar x-y globales, "2b" para usar el sistema de ejes local de la barra 2 (que en general será otra barra distinta de la que estamos definiendo). Cambiése 2 por la barra deseada. Finalmente puede ser un número decimal, que expresará el ángulo en grados desde el eje "x" local hasta el eje "x" deseado. Si se desea operar en ejes locales de la barra pondremos 0.0, ó bien 3b si se tratase de la barra 3.
 
-Una vez especificados los datos de las barras puede guardar provisionalmente el fichero y pulsar el botón "ver barras" para obtener un dibujo en el que figura la numeración de cada barra, sus ejes locales (en negro) y sus ejes deseados en cada extremo (en magenta). Puede identificar cuál es el extremo "i" por la orientación del eje local colineal con la barra y porque los ejes locales se dibujan más próximos a ese extremo. Solo se leerán del fichero los datos de las barras (las ecuaciones adicionales etc serán ignoradas si están presentes). Puede por tanto usar esta funcionalidad con seguridad esté el fichero totalmente editado o no lo esté, ya que el mismo no se modifica. Seguidamente puede continuar con la edición de las ecuaciones adicionales teniendo a la vista dicho dibujo.
+Una vez especificados los datos de las barras puede guardar provisionalmente el fichero y pulsar el botón "ver barras" para obtener un dibujo en el que figura la numeración de cada barra, sus ejes locales (en negro) y sus ejes deseados en cada extremo (en magenta). Puede identificar cuál es el extremo "i" por la orientación del eje local colineal con la barra "x" y porque los ejes locales se dibujan más próximos a ese extremo. Solo se leerán del fichero los datos de las barras (las ecuaciones adicionales etc serán ignoradas si están presentes). Puede por tanto usar esta funcionalidad con seguridad esté el fichero totalmente editado o no lo esté, ya que el mismo no se modifica. Seguidamente puede continuar con la edición de las ecuaciones adicionales teniendo a la vista dicho dibujo.
 
 -- Tras la definición de las barras siguen tres lineas cuyo contenido será ignorado. Se sugiere dejar la primera en blanco por legibilidad. La segunda puede contener un texto como "Ecuaciones adicionales". La tercera puede usarse como cabecera legible para las ecuaciones adicionales que se aportarán seguidamente.
 
@@ -658,7 +658,7 @@ Como el autor suele decir, "el programa es agnóstico en cuanto a unidades". El 
 
 - Resultados:
 
--- La salida de texto proporciona los desplazamientos (y giros) y las fuerzas (y momentos) en los extremos de cada barra, en los ejes solicitados y en lo ejes locales de la barra.
+-- La salida de texto proporciona los desplazamientos (y giros, en radianes) y las fuerzas (y momentos) en los extremos de cada barra, en los ejes solicitados y en los ejes locales de la barra.
 
 -- La figura "Configuración deformada" dibuja la estructura deformada. Por conveniencia se marcan con "+" las nuevas posiciones de los extremos de las barras. En la parte inferior se informa del factor de escala con el que se han dibujado los desplazamientos.
 
