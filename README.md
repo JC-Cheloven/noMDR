@@ -7,7 +7,7 @@ flexure angles) of the extreme points of the bars are to be provided by the
 user as linear equations. This provides maximum flexibility for the modelling
 of unusual connections (may barely be understood as "nodes"), such as
 bars contacting with other bars, hinges conecting rigid bars in some 
-midle point, relatioships involving remote extreme points and so on.
+midle point, relatioships involving remote points and so on.
 In spanish at this time.
 
 The author expects noMDR to be useful for you!
