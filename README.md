@@ -8,6 +8,9 @@ user as linear equations. This provides maximum flexibility for the modelling
 of unusual connections (may barely be understood as "nodes"), such as
 bars contacting with other bars, hinges conecting rigid bars in some 
 midle point, relatioships involving remote points and so on.
+
+Current version 0.5 includes axially-rigid and bending-rigid bars (or both). 
+
 In spanish at this time.
 
 The author expects noMDR to be useful for you!
