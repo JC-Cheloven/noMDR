@@ -1,11 +1,11 @@
  Portico cerrado con inc_T en la barra superior biarticulada o biempotrada
 
  Elementos barra = 4
-  Nº   EI       EA       x(i)  y(i)      x(j)   y(j)    p    d0x    d0y  fi0   ejes_i    ejes_j
- 0    100.    1.0e4      0.0   0.0       2.0    0.0     0.    0.    0.    0.     g         g 
- 1    100.    1.0e4      2.0   0.0       2.0    2.0     0.    0.    0.    0.     g         g 
- 2    100.    1.0e4      0.0   0.0       0.0    2.0     0.    0.    0.    0.     g         g 
- 3    100.    1.0e4      0.0   2.0       2.0    2.0     0.   0.08   0.    0.     g         g
+ Nº itipe  EI      EA      x(i)  y(i)      x(j)   y(j)   p    d0x   d0y  fi0   ejes_i    ejes_j
+ 0    0   100.   1.0e4     0.0   0.0       2.0    0.0    0.    0.    0.    0.     g         g 
+ 1    0   100.   1.0e4     2.0   0.0       2.0    2.0    0.    0.    0.    0.     g         g 
+ 2    0   100.   1.0e4     0.0   0.0       0.0    2.0    0.    0.    0.    0.     g         g 
+ 3    0   100.   1.0e4     0.0   2.0       2.0    2.0    0.   0.08   0.    0.     g         g
 
  Ecuaciones 24
  i_gdl   coef   i_gdl   coef  ...etc...     igual_a
